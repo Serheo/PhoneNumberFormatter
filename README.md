@@ -5,7 +5,6 @@
 [![Build](https://travis-ci.org/Serheo/PhoneNumberFormatter.svg?branch=master)](https://travis-ci.org/Serheo/PhoneNumberFormatter)
 ![Swift](https://img.shields.io/badge/Swift-4.0-orange.svg)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![codecov.io](http://codecov.io/github/Serheo/PhoneNumberFormatter/coverage.svg)](http://codecov.io/github/Serheo/PhoneNumberFormatter)
 
 UITextField and NSFormatter subclasses for formatting phone numbers. Allow different formats for different countries(patterns). Caret positioning works excellent.
 Swift 4. <br/>
