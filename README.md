@@ -29,7 +29,9 @@ textField.config.defaultConfiguration = PhoneFormat(defaultPhoneFormat: "(###) #
 All input strings will be parsed in that way. 
 Example: +1 (123) 123-45-67
 
-<iframe src='https://gfycat.com/ifr/VerifiablePolishedGazelle' frameborder='0' scrolling='no' allowfullscreen width='640' height='228'></iframe>
+<p align="center">
+    <img src="https://thumbs.gfycat.com/VerifiablePolishedGazelle-max-14mb.gif" alt="Image"/>
+</p>
 
 ### Prefix Format
 You can set prefix on all inputs:
