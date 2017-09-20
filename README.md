@@ -6,7 +6,7 @@
 [![codecov.io](http://codecov.io/github/Serheo/PhoneNumberFormatter/coverage.svg)](http://codecov.io/github/Serheo/PhoneNumberFormatter)
 
 UITextField and NSFormatter subclasses for formatting phone numbers. Allow different formats for different countries(patterns). Caret positioning works excellent.
-Swift 4. 
+Swift 4. <br/>
 If you need ObjC support use - https://github.com/Serheo/SHSPhoneComponent/
 
 ## Installation
