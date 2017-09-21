@@ -8,11 +8,8 @@ branches:
     master
 
 before_install:
-  - brew unlink swiftlint
-  - brew uninstall swiftlint
-  - brew install swiftlint
   - brew update
-  - brew outdated swiftlint || brew upgrade swiftlint
+  - brew install swiftlint
 
 before_script:
   - swiftlint
