@@ -7,13 +7,6 @@ branches:
   only:
     master
 
-before_install:
-  - brew update
-  - brew install swiftlint
-
-before_script:
-  - swiftlint
-
 script: 
   - set -o pipefail
   - xcodebuild clean build test -project PhoneNumberFormatter.xcodeproj -scheme PhoneNumberFormatter -destination 'platform=iOS Simulator,name=iPhone 5s,OS=10.3.1'
