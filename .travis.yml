@@ -8,4 +8,4 @@ branches:
     master
 
 script: 
-  - xcodebuild clean build test -project PhoneNumberFormatter.xcodeproj -scheme PhoneNumberFormatter -destination 'platform=iOS Simulator,name=iPhone 6,OS=11.0'
+  - xcodebuild clean build test -project PhoneNumberFormatter.xcodeproj -scheme PhoneNumberFormatter -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.2'
