@@ -2,10 +2,10 @@ osx_image: xcode9.0
 language: swift
 xcode_project: PhoneNumberFormatter.xcodeproj
 xcode_scheme: PhoneNumberFormatter
-xcode_sdk: iphonesimulator9.3
+xcode_sdk: iphonesimulator11.0
 branches:
   only:
     master
 
-script:
-  - xcodebuild clean build test -project PhoneNumberFormatter.xcodeproj -scheme PhoneNumberFormatter
+script: 
+  - xcodebuild clean build test -project PhoneNumberFormatter.xcodeproj -scheme PhoneNumberFormatter -destination 'platform=iOS Simulator,name=iPhone 6,OS=11.0'
