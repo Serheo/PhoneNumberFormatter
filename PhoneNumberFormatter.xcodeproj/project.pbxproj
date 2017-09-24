@@ -13,15 +13,15 @@
 		3F6329091F5670CC007676FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F6329071F5670CC007676FA /* Main.storyboard */; };
 		3F63290B1F5670CC007676FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F63290A1F5670CC007676FA /* Assets.xcassets */; };
 		3F63290E1F5670CC007676FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F63290C1F5670CC007676FA /* LaunchScreen.storyboard */; };
+		3F82D2C21F7747CD004C2D60 /* FormattedTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F82D2BF1F7747AA004C2D60 /* FormattedTextFieldDelegate.swift */; };
+		3F82D2C31F7747CD004C2D60 /* PhoneFormattedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F82D2C01F7747AA004C2D60 /* PhoneFormattedTextField.swift */; };
+		3F82D2C41F7747CD004C2D60 /* PhoneFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F82D2C11F7747AA004C2D60 /* PhoneFormatter.swift */; };
+		3F82D2C51F7747D2004C2D60 /* ConfigurationRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F82D2BD1F7747AA004C2D60 /* ConfigurationRepo.swift */; };
+		3F82D2C61F7747D2004C2D60 /* PhoneFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F82D2BE1F7747AA004C2D60 /* PhoneFormat.swift */; };
 		3F980BEA1F567268001E4E55 /* PhoneNumberFormatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FAC92881F49F3D1001EDF79 /* PhoneNumberFormatter.framework */; };
 		3F980BEB1F567268001E4E55 /* PhoneNumberFormatter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3FAC92881F49F3D1001EDF79 /* PhoneNumberFormatter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3FAC92921F49F3D1001EDF79 /* PhoneNumberFormatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FAC92881F49F3D1001EDF79 /* PhoneNumberFormatter.framework */; };
 		3FAC92991F49F3D1001EDF79 /* PhoneNumberFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FAC928B1F49F3D1001EDF79 /* PhoneNumberFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3FAC92A61F49F712001EDF79 /* PhoneFormattedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC92A51F49F712001EDF79 /* PhoneFormattedTextField.swift */; };
-		3FAC92A81F49F8A7001EDF79 /* FormattedTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC92A71F49F8A7001EDF79 /* FormattedTextFieldDelegate.swift */; };
-		3FAC92AA1F49F9BD001EDF79 /* PhoneFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC92A91F49F9BD001EDF79 /* PhoneFormatter.swift */; };
-		3FAC92B01F49FBF1001EDF79 /* ConfigurationRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC92AE1F49FB69001EDF79 /* ConfigurationRepo.swift */; };
-		3FAC92B11F49FBF1001EDF79 /* PhoneFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC92AF1F49FB69001EDF79 /* PhoneFormat.swift */; };
 		3FC46A781F5C5D8200ADBE5E /* FormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC46A771F5C5D8200ADBE5E /* FormatterTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,16 +65,16 @@
 		3F63290A1F5670CC007676FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F63290D1F5670CC007676FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F63290F1F5670CC007676FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F82D2BD1F7747AA004C2D60 /* ConfigurationRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationRepo.swift; sourceTree = "<group>"; };
+		3F82D2BE1F7747AA004C2D60 /* PhoneFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneFormat.swift; sourceTree = "<group>"; };
+		3F82D2BF1F7747AA004C2D60 /* FormattedTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattedTextFieldDelegate.swift; sourceTree = "<group>"; };
+		3F82D2C01F7747AA004C2D60 /* PhoneFormattedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneFormattedTextField.swift; sourceTree = "<group>"; };
+		3F82D2C11F7747AA004C2D60 /* PhoneFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneFormatter.swift; sourceTree = "<group>"; };
 		3FAC92881F49F3D1001EDF79 /* PhoneNumberFormatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PhoneNumberFormatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FAC928B1F49F3D1001EDF79 /* PhoneNumberFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhoneNumberFormatter.h; sourceTree = "<group>"; };
 		3FAC928C1F49F3D1001EDF79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FAC92911F49F3D1001EDF79 /* PhoneNumberFormatterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhoneNumberFormatterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FAC92981F49F3D1001EDF79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3FAC92A51F49F712001EDF79 /* PhoneFormattedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneFormattedTextField.swift; sourceTree = "<group>"; };
-		3FAC92A71F49F8A7001EDF79 /* FormattedTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattedTextFieldDelegate.swift; sourceTree = "<group>"; };
-		3FAC92A91F49F9BD001EDF79 /* PhoneFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneFormatter.swift; sourceTree = "<group>"; };
-		3FAC92AE1F49FB69001EDF79 /* ConfigurationRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationRepo.swift; sourceTree = "<group>"; };
-		3FAC92AF1F49FB69001EDF79 /* PhoneFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneFormat.swift; sourceTree = "<group>"; };
 		3FC46A771F5C5D8200ADBE5E /* FormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +118,26 @@
 			path = Demo;
 			sourceTree = "<group>";
 		};
+		3F82D2BB1F7747AA004C2D60 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				3F82D2BC1F7747AA004C2D60 /* ConfigRepo */,
+				3F82D2BF1F7747AA004C2D60 /* FormattedTextFieldDelegate.swift */,
+				3F82D2C01F7747AA004C2D60 /* PhoneFormattedTextField.swift */,
+				3F82D2C11F7747AA004C2D60 /* PhoneFormatter.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		3F82D2BC1F7747AA004C2D60 /* ConfigRepo */ = {
+			isa = PBXGroup;
+			children = (
+				3F82D2BD1F7747AA004C2D60 /* ConfigurationRepo.swift */,
+				3F82D2BE1F7747AA004C2D60 /* PhoneFormat.swift */,
+			);
+			path = ConfigRepo;
+			sourceTree = "<group>";
+		};
 		3FAC927E1F49F3D0001EDF79 = {
 			isa = PBXGroup;
 			children = (
@@ -142,10 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				3FAC928B1F49F3D1001EDF79 /* PhoneNumberFormatter.h */,
-				3FAC92A51F49F712001EDF79 /* PhoneFormattedTextField.swift */,
-				3FAC92A91F49F9BD001EDF79 /* PhoneFormatter.swift */,
-				3FAC92A71F49F8A7001EDF79 /* FormattedTextFieldDelegate.swift */,
-				3FAC92AD1F49FB69001EDF79 /* ConfigRepo */,
+				3F82D2BB1F7747AA004C2D60 /* Sources */,
 				3FAC928C1F49F3D1001EDF79 /* Info.plist */,
 			);
 			path = PhoneNumberFormatter;
@@ -159,15 +176,6 @@
 				3FAC92981F49F3D1001EDF79 /* Info.plist */,
 			);
 			path = PhoneNumberFormatterTests;
-			sourceTree = "<group>";
-		};
-		3FAC92AD1F49FB69001EDF79 /* ConfigRepo */ = {
-			isa = PBXGroup;
-			children = (
-				3FAC92AE1F49FB69001EDF79 /* ConfigurationRepo.swift */,
-				3FAC92AF1F49FB69001EDF79 /* PhoneFormat.swift */,
-			);
-			path = ConfigRepo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,11 +349,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FAC92B11F49FBF1001EDF79 /* PhoneFormat.swift in Sources */,
-				3FAC92B01F49FBF1001EDF79 /* ConfigurationRepo.swift in Sources */,
-				3FAC92A81F49F8A7001EDF79 /* FormattedTextFieldDelegate.swift in Sources */,
-				3FAC92AA1F49F9BD001EDF79 /* PhoneFormatter.swift in Sources */,
-				3FAC92A61F49F712001EDF79 /* PhoneFormattedTextField.swift in Sources */,
+				3F82D2C61F7747D2004C2D60 /* PhoneFormat.swift in Sources */,
+				3F82D2C51F7747D2004C2D60 /* ConfigurationRepo.swift in Sources */,
+				3F82D2C41F7747CD004C2D60 /* PhoneFormatter.swift in Sources */,
+				3F82D2C21F7747CD004C2D60 /* FormattedTextFieldDelegate.swift in Sources */,
+				3F82D2C31F7747CD004C2D60 /* PhoneFormattedTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
