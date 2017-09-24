@@ -1,4 +1,4 @@
-osx_image: xcode9.0
+osx_image: xcode9
 language: swift
 xcode_project: PhoneNumberFormatter.xcodeproj
 xcode_scheme: PhoneNumberFormatter
@@ -8,4 +8,5 @@ branches:
     master
 
 script: 
-  - xcodebuild clean build test -project PhoneNumberFormatter.xcodeproj -scheme PhoneNumberFormatter -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.2'
+  - set -o pipefail
+  - xcodebuild clean build test -project PhoneNumberFormatter.xcodeproj -scheme PhoneNumberFormatter -destination 'platform=iOS Simulator,name=iPhone 6,OS=11.0'
