@@ -18,7 +18,7 @@ github "Serheo/PhoneNumberFormatter"
 ```
 #### CocoaPods
 ```
-pod "PhoneNumberFormatter"
+pod "SwiftPhoneNumberFormatter"
 ```
 
 ## Getting Started
