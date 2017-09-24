@@ -1,7 +1,7 @@
 osx_image: xcode9.0
 language: swift
 xcode_project: PhoneNumberFormatter.xcodeproj
-xcode_scheme: ToastMessage
+xcode_scheme: PhoneNumberFormatter
 xcode_sdk: iphonesimulator9.3
 branches:
   only:
