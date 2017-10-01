@@ -1,5 +1,3 @@
-# --- Under Development ---
-
 # Phone Number Formatter
 
 [![Build](https://travis-ci.org/Serheo/PhoneNumberFormatter.svg?branch=master)](https://travis-ci.org/Serheo/PhoneNumberFormatter)
