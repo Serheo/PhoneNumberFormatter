@@ -13,6 +13,7 @@ final class FormattedTextFieldDelegate: NSObject, UITextFieldDelegate {
 
     var textDidChangeBlock: ((_ textField: UITextField?) -> Void)?
     var prefix: String?
+    var hasPredictiveInput: Bool = true
 
     private let formatter: PhoneFormatter
     init(formatter: PhoneFormatter) {
@@ -44,7 +45,12 @@ final class FormattedTextFieldDelegate: NSObject, UITextFieldDelegate {
 
         self.textDidChangeBlock?(textField)
         textField.sendActions(for: .valueChanged)
-        return false
+
+        if hasPredictiveInput == true && (textField.text == nil || textField.text == "") && string == " " {
+            return true
+        } else {
+            return false
+        }
     }
 
     // MARK: UITextfield Delegate
@@ -66,7 +72,6 @@ final class FormattedTextFieldDelegate: NSObject, UITextFieldDelegate {
     }
 
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
-
         if let userResult = userDelegate?.textFieldShouldClear?(textField) {
             return userResult
         }

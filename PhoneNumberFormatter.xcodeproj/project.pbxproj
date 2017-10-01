@@ -121,9 +121,9 @@
 		3F82D2BB1F7747AA004C2D60 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				3F82D2C01F7747AA004C2D60 /* PhoneFormattedTextField.swift */,
 				3F82D2BC1F7747AA004C2D60 /* ConfigRepo */,
 				3F82D2BF1F7747AA004C2D60 /* FormattedTextFieldDelegate.swift */,
-				3F82D2C01F7747AA004C2D60 /* PhoneFormattedTextField.swift */,
 				3F82D2C11F7747AA004C2D60 /* PhoneFormatter.swift */,
 			);
 			path = Sources;

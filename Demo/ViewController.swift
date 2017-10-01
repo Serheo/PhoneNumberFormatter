@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     }
 
     func defaultExample() {
-        textField.config.defaultConfiguration = PhoneFormat(defaultPhoneFormat: "(###) ###-##-##")
+        textField.config.defaultConfiguration = PhoneFormat(defaultPhoneFormat: "# (###) ###-##-##")
     }
 
     func prefixExample() {

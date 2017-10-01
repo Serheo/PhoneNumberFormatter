@@ -22,6 +22,19 @@ final public class PhoneFormattedTextField: UITextField {
     public let config: ConfigurationRepo
 
     /**
+     If you have a predictive input enabled.
+     Default is true.
+     */
+    public var hasPredictiveInput: Bool {
+        set {
+            formatProxy.hasPredictiveInput = newValue
+        }
+        get {
+            return formatProxy.hasPredictiveInput
+        }
+    }
+
+    /**
      Prefix for all formats
      */
     public var prefix: String? {
