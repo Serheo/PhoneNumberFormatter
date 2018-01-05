@@ -40,7 +40,7 @@ final class PhoneFormatter {
 
         if let regex = try? NSRegularExpression(pattern: "\\D",
                                                 options: [NSRegularExpression.Options.caseInsensitive]) {
-            let range = NSRange(location: 0, length: text.characters.count)
+            let range = NSRange(location: 0, length: text.count)
             return regex.stringByReplacingMatches(in: text, options: [], range: range, withTemplate: "")
         }
         return nil
@@ -51,7 +51,7 @@ final class PhoneFormatter {
             return false
         }
 
-        let range = NSRange(location: 0, length: text.characters.count)
+        let range = NSRange(location: 0, length: text.count)
         let match = regex.firstMatch(in: text, options: [], range: range)
         if let matchObject = match, matchObject.range.location != NSNotFound {
             return true
@@ -82,17 +82,17 @@ final class PhoneFormatter {
     private func removeFormatFrom(text: String, format: PhoneFormat, prefix: String?) -> String? {
         var unprefixedString = text
         if let prefixString = prefix, unprefixedString.hasPrefix(prefixString) {
-            unprefixedString.removeFirst(prefixString.characters.count)
+            unprefixedString.removeFirst(prefixString.count)
         }
 
         let phoneFormat = format.phoneFormat
         var removeRanges: [NSRange] = []
 
-        let min = [text.characters.count, format.phoneFormat.characters.count].min() ?? 0
+        let min = [text.count, format.phoneFormat.count].min() ?? 0
         for i in 0 ..< min {
             let index = phoneFormat.index(phoneFormat.startIndex, offsetBy: i)
-            let formatChar = phoneFormat.characters[index]
-            if formatChar != text.characters[index] {
+            let formatChar = phoneFormat[index]
+            if formatChar != text[index] {
                 break
             }
 
@@ -112,7 +112,7 @@ final class PhoneFormatter {
     }
 
     func valuableCharCount(in text: String.SubSequence) -> Int {
-        let count = text.characters.reduce(0) { (result, item) -> Int in
+        let count = text.reduce(0) { (result, item) -> Int in
             if isValuableChar(char: item) {
                 return result + 1
             } else {
@@ -128,12 +128,12 @@ final class PhoneFormatter {
         var i = 0
         var charIndex = 0
         let phoneFormat = format.phoneFormat
-        while i < phoneFormat.characters.count && charIndex < text.characters.count {
+        while i < phoneFormat.count && charIndex < text.count {
             let index = phoneFormat.index(phoneFormat.startIndex, offsetBy: i)
-            let ch = phoneFormat.characters[index]
+            let ch = phoneFormat[index]
             if isRequireSubstitute(char: ch) {
                 let charIndexItem = text.index(text.startIndex, offsetBy: charIndex)
-                let sp = text.characters[charIndexItem]
+                let sp = text[charIndexItem]
                 charIndex += 1
                 result.append(sp)
             } else {
@@ -163,12 +163,12 @@ final class PhoneFormatter {
 
         let text = textField.text ?? ""
         var lasts = caretPosition
-        var start = text.characters.count
+        var start = text.count
         var index = start - 1
 
         while start >= 0 && lasts > 0 {
             let indexChar = text.index(text.startIndex, offsetBy: index)
-            let ch = text.characters[indexChar]
+            let ch = text[indexChar]
             if isValuableChar(char: ch) {
                 lasts -= 1
             }

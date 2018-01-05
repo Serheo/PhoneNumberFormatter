@@ -22,7 +22,7 @@ final class FormattedTextFieldDelegate: NSObject, UITextFieldDelegate {
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool {
-        if let prefix = prefix, range.location < prefix.characters.count {
+        if let prefix = prefix, range.location < prefix.count {
             return false
         }
 
