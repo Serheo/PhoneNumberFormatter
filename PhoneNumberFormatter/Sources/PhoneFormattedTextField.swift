@@ -100,7 +100,7 @@ final public class PhoneFormattedTextField: UITextField {
      */
     public func phoneNumberWithoutPrefix() -> String? {
         if var current = self.text, let prefixString = self.prefix, current.hasPrefix(prefixString) {
-            current.removeFirst(prefixString.characters.count)
+            current.removeFirst(prefixString.count)
             return formatter.digitOnlyString(text: current)
         } else {
             return formatter.digitOnlyString(text: self.text)
