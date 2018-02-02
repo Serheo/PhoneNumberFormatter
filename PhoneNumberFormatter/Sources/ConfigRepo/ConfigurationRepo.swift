@@ -1,4 +1,4 @@
-	//
+//
 //  ConfigurationRepo.swift
 //  PhoneNumberFormatter
 //
@@ -19,7 +19,7 @@ final public class ConfigurationRepo {
     /**
       Default configuration
      */
-    public var defaultConfiguration: PhoneFormat = PhoneFormat(defaultPhoneFormat : "#############")
+    public var defaultConfiguration: PhoneFormat = PhoneFormat(defaultPhoneFormat: "#############")
 
     init() {
     }
