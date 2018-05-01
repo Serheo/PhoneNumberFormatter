@@ -89,15 +89,15 @@ final class PhoneFormatter {
         var removeRanges: [NSRange] = []
 
         let min = [text.count, format.phoneFormat.count].min() ?? 0
-        for i in 0 ..< min {
-            let index = phoneFormat.index(phoneFormat.startIndex, offsetBy: i)
+        for idx in 0 ..< min {
+            let index = phoneFormat.index(phoneFormat.startIndex, offsetBy: idx)
             let formatChar = phoneFormat[index]
             if formatChar != text[index] {
                 break
             }
 
             if isValuableChar(char: formatChar) {
-                let newRange = NSRange(location: i, length: 1)
+                let newRange = NSRange(location: idx, length: 1)
                 removeRanges.append(newRange)
             }
         }
@@ -125,21 +125,21 @@ final class PhoneFormatter {
     private func applyFormat(text: String, format: PhoneFormat, prefix: String?) -> String {
         var result: [Character] = []
 
-        var i = 0
+        var idx = 0
         var charIndex = 0
         let phoneFormat = format.phoneFormat
-        while i < phoneFormat.count && charIndex < text.count {
-            let index = phoneFormat.index(phoneFormat.startIndex, offsetBy: i)
-            let ch = phoneFormat[index]
-            if isRequireSubstitute(char: ch) {
+        while idx < phoneFormat.count && charIndex < text.count {
+            let index = phoneFormat.index(phoneFormat.startIndex, offsetBy: idx)
+            let character = phoneFormat[index]
+            if isRequireSubstitute(char: character) {
                 let charIndexItem = text.index(text.startIndex, offsetBy: charIndex)
-                let sp = text[charIndexItem]
+                let strp = text[charIndexItem]
                 charIndex += 1
-                result.append(sp)
+                result.append(strp)
             } else {
-                result.append(ch)
+                result.append(character)
             }
-            i += 1
+            idx += 1
         }
         return (prefix ?? "") + String(result)
     }
@@ -168,8 +168,8 @@ final class PhoneFormatter {
 
         while start >= 0 && lasts > 0 {
             let indexChar = text.index(text.startIndex, offsetBy: index)
-            let ch = text[indexChar]
-            if isValuableChar(char: ch) {
+            let character = text[indexChar]
+            if isValuableChar(char: character) {
                 lasts -= 1
             }
 
