@@ -64,9 +64,22 @@ let custom2 = PhoneFormat(phoneFormat: "(###) ###-###", regexp: "^2\\d*$")
 textField.config.add(format: custom2)
 ```
 
+### Listening to changes
+To be notified of changes on the textField input add a `textDidChangeBlock` closure
+```swift
+textField.textDidChangeBlock = { field in
+  if let text = field?.text, text != "" {
+      print(text)
+  } else {
+      print("No text")
+  }
+```
+
+Attempting to listen to changes through other means will likely fail (e.g., implementing `UITextFieldDelegate`'s `textField:shouldChangeCharactersIn:range:`).
+
 ## Requirements
 iOS 9+
-Swift 4 
+Swift 4
 
 ## License
 PhoneNumberFormatter is available under the MIT license. See the LICENSE file for more info.

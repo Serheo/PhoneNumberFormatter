@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         textField.becomeFirstResponder()
 
         textField.textDidChangeBlock = { field in
-            if let text = field?.text {
+            if let text = field?.text, text != "" {
                 print(text)
             } else {
                 print("No text")
