@@ -1,7 +1,7 @@
 # Phone Number Formatter
 
 [![Build](https://travis-ci.org/Serheo/PhoneNumberFormatter.svg?branch=master)](https://travis-ci.org/Serheo/PhoneNumberFormatter)
-![Swift](https://img.shields.io/badge/Swift-4.0-orange.svg)
+![Swift](https://img.shields.io/badge/Swift-4.2-orange.svg)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 UITextField and NSFormatter subclasses for formatting phone numbers. Allow different formats for different countries(patterns). Caret positioning works excellent.
