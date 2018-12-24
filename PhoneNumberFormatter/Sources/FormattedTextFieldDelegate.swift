@@ -29,9 +29,15 @@ final class FormattedTextFieldDelegate: NSObject, UITextFieldDelegate {
         let resultText = textField.text ?? ""
         let caretPosition = formatter.pushCaretPosition(text: resultText, range: range)
 
-        let rangeExpressionStart = resultText.index(resultText.startIndex, offsetBy: range.location)
-        let rangeExpressionEnd = resultText.index(resultText.startIndex, offsetBy: range.location + range.length)
-        let newString = resultText.replacingCharacters(in: rangeExpressionStart..<rangeExpressionEnd, with: string)
+        let isDeleting = string.count == 0
+        let newString: String
+        if isDeleting {
+            newString = formatter.formattedRemove(text: resultText, range: range)
+        } else {
+            let rangeExpressionStart = resultText.index(resultText.startIndex, offsetBy: range.location)
+            let rangeExpressionEnd = resultText.index(resultText.startIndex, offsetBy: range.location + range.length)
+            newString = resultText.replacingCharacters(in: rangeExpressionStart..<rangeExpressionEnd, with: string)
+        }
 
         let result = formatter.formatText(text: newString, prefix: prefix)
         textField.text = result.text

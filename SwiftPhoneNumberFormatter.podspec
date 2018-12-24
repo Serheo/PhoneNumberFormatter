@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SwiftPhoneNumberFormatter"
-  s.version      = "1.4"
+  s.version      = "1.5"
   s.summary      = "PhoneNumberFormatter for iOS"
   s.homepage     = "https://github.com/Serheo/PhoneNumberFormatter"
   s.license      = 'MIT'

@@ -79,6 +79,28 @@ final class PhoneFormatter {
         return PhoneFormatterResult(text: result)
     }
 
+    func formattedRemove(text: String, range: NSRange) -> String {
+        var possibleString = Array(text)
+        let rangeExpressionStart = text.index(text.startIndex, offsetBy: range.location)
+        let rangeExpressionEnd = text.index(text.startIndex, offsetBy: range.location + range.length)
+
+        let targetSubstring = text[rangeExpressionStart..<rangeExpressionEnd]
+        var removeCount = valuableCharCount(in: targetSubstring)
+        if range.length == 1 {
+            removeCount = 1
+        }
+
+        for wordCount in 0..<removeCount {
+            for idx in (0...(range.location + range.length - wordCount - 1)).reversed() {
+                if isValuableChar(char: possibleString[idx]) {
+                    possibleString.remove(at: idx)
+                    break
+                }
+            }
+        }
+        return String(possibleString)
+    }
+
     private func removeFormatFrom(text: String, format: PhoneFormat, prefix: String?) -> String? {
         var unprefixedString = text
         if let prefixString = prefix, unprefixedString.hasPrefix(prefixString) {
